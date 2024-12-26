@@ -1,0 +1,103 @@
+/* pages/room/room.wxss */
+.container {
+  padding: 40rpx;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.players-grid {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20rpx;
+  position: relative;
+  z-index: 1;
+}
+
+.players-column {
+  display: flex;
+  flex-direction: column;
+  gap: 40rpx;
+}
+
+.player-slot {
+  width: 160rpx;
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rpx;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background: rgba(128, 128, 128, 0.5);
+}
+
+.player-name {
+  font-size: 24rpx;
+  color: white;
+  text-shadow: 0 0 4rpx rgba(0, 0, 0, 0.5);
+}
+
+.button-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20rpx;
+  margin-bottom: 40rpx;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+
+.invite-btn, .ready-btn, .start-btn {
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: white;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+  border: none;
+  position: relative;
+  z-index: 1;
+}
+
+.invite-btn {
+  background: rgba(76, 175, 80, 0.7);
+}
+
+.ready-btn {
+  background: rgba(76, 175, 80, 0.7);
+}
+
+.ready-btn.ready {
+  background: rgba(128, 128, 128, 0.7);
+}
+
+.start-btn {
+  background: rgba(33, 150, 243, 0.7);  /* 蓝色背景 */
+}
+
+.start-btn.disabled {
+  background: rgba(128, 128, 128, 0.7);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.invite-btn:active, .ready-btn:active, .start-btn:active {
+  transform: scale(0.98);
+}

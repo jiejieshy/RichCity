@@ -1,0 +1,87 @@
+/* pages/game/game.wxss */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+  position: relative;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.game-status {
+  text-align: center;
+  padding: 20rpx;
+  color: white;
+  font-size: 32rpx;
+  margin-bottom: 40rpx;
+}
+
+.cards-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20rpx;
+  padding: 20rpx;
+}
+
+.card-item {
+  width: 200rpx;
+  height: 300rpx;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.card-item.selected {
+  border: 4rpx solid #4CAF50;
+  transform: scale(1.05);
+}
+
+.results {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40rpx;
+  border-radius: 20rpx;
+  width: 80%;
+}
+
+.result-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+
+.result-item {
+  padding: 10rpx 0;
+  font-size: 28rpx;
+}
+
+.removed-card {
+  margin-top: 20rpx;
+  padding-top: 20rpx;
+  border-top: 2rpx solid #eee;
+  font-size: 28rpx;
+  color: #666;
+}

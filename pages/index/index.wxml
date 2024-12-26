@@ -1,0 +1,7 @@
+<view class="container">
+  <!-- 测试本地图片 -->
+  <image class="background-image" src="../../img/icon/cover.jpg" mode="aspectFill"></image>
+  <button class="create-room-btn" bindtap="createRoom">
+    创建房间
+  </button>
+</view>

@@ -1,0 +1,33 @@
+<!--pages/game/game.wxml-->
+<view class="container">
+  <image class="background-image" src="../../img/icon/cover.jpg" mode="aspectFill"></image>
+
+  <!-- 游戏进度提示 -->
+  <view class="game-status">
+    <text>当前玩家：{{players[currentPlayer].name}}</text>
+  </view>
+
+  <!-- 角色牌选择区域 -->
+  <view class="cards-container">
+    <view class="cards-grid">
+      <view class="card-item {{index === selectedIndex ? 'selected' : ''}}"
+            wx:for="{{cards}}"
+            wx:key="id"
+            bindtap="selectCard"
+            data-index="{{index}}">
+        {{item.name}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 结果展示 -->
+  <view class="results" wx:if="{{showResults}}">
+    <view class="result-title">游戏结果</view>
+    <view class="result-item" wx:for="{{results}}" wx:key="index">
+      <text>{{item.name}}: {{item.role.name}}</text>
+    </view>
+    <view class="removed-card">
+      <text>被移除的牌: {{removedCard.name}}</text>
+    </view>
+  </view>
+</view>
