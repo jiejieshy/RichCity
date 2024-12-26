@@ -40,8 +40,8 @@ Page({
       { id: 6, name: '商人' },
       { id: 7, name: '建筑师' },
       { id: 8, name: '领主' },
-      { id: 9, name: '角色9' },
-      { id: 10, name: '角色10' }
+      { id: 9, name: '女巫' },
+      { id: 10, name: '皇后' }
     ];
   },
 
